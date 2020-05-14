@@ -1,0 +1,82 @@
+/* Cart and Save for Later */
+[data-active="false"] {
+  opacity: 0;
+}
+[data-active="true"] {
+  opacity: 1;
+}
+
+.ui-cart-container {
+  margin: 1rem 0 4rem 0;
+  color: #9a9ca2;
+  font-size: 0.75rem;
+  padding: 0 1rem;
+}
+
+.ui-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1rem;
+}
+
+.ui-cart-section {
+  position: absolute;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.ui-cart-section[data-state="normal"][data-collapsed="false"],
+.ui-cart-section[data-state="saved"][data-collapsed="false"] {
+  position: relative;
+  margin-top: 0;
+}
+
+.ui-cart-item-title {
+  margin-right: 0.5rem;
+}
+
+/* Balance Grid */
+.ui-balance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ui-balance-details {
+  position: absolute;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 4rem;
+  grid-template-areas:
+    "error error"
+    "subtotal subtotal"
+    "delivery taxes"
+    "total total"
+    "pay pay";
+}
+
+.ui-balance-subtotal {
+  grid-area: subtotal;
+}
+
+.ui-balance-delivery {
+  grid-area: delivery;
+}
+
+.ui-balance-taxes {
+  grid-area: taxes;
+}
+
+.ui-balance-total {
+  grid-area: total;
+}
+
+.ui-balance-pay {
+  grid-area: pay;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.ui-balance-error {
+  grid-area: error;
+}
